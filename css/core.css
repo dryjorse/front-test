@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  max-width: 1320px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.wrapper {
+  overflow: hidden;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #231f20;
+}
+input,
+select {
+  background: inherit;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+option {
+  /* background: inherit;
+  b */
+  background-color: black;
+}
+.btn {
+  border-radius: 8px;
+  padding: 10px 30px 12px;
+  display: block;
+  width: fit-content;
+  background-color: white;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  transition: 0.3s all ease-out;
+}
+.btn:hover {
+  background-color: #a1834e;
+  color: white;
+}
+.box {
+  border: 1px #bcbdc0 solid;
+  border-radius: 8px;
+  padding: 9px 22px 11px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+.block-secondary {
+  background-color: #eeeff2;
+  min-height: 95px;
+}
+.swiper-scrollbar {
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 450px !important;
+  background: #5e5e61;
+  cursor: grab;
+}
+.opacity-show {
+  opacity: 1 !important;
+}
+.pointer-events-all {
+  pointer-events: all;
+}
+.color-white {
+  color: white !important;
+}
