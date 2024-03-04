@@ -21,19 +21,19 @@ header .container {
   align-items: center;
   gap: 148px;
 }
-header nav {
+header .nav {
   flex: 1 1 auto;
 }
-header nav ul {
+header .nav ul {
   display: flex;
   justify-content: space-between;
 }
-header nav ul a {
+header .nav ul a {
   position: relative;
   padding-bottom: 3px;
   color: white;
 }
-header nav ul a::before {
+header .nav ul a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -43,9 +43,50 @@ header nav ul a::before {
   background-color: #d2ab66;
   transition: 0.3s all ease-out;
 }
-header nav ul a:hover::before,
-header nav ul a.active::before {
+header .nav ul a:hover::before,
+header .nav ul a.active::before {
   width: 100%;
+}
+header .burger-btn {
+  display: none;
+}
+header .burger-btn img {
+  pointer-events: none;
+}
+
+/* BURGER */
+
+.burger {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #231f20;
+  text-align: center;
+  color: white;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: 0.3s all ease-out;
+  display: none;
+}
+.burger.active {
+  transform: translateX(0%);
+}
+.burger nav {
+  height: 100%;
+}
+.burger nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.burger nav ul a {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 20px 32px;
+  display: block;
+  color: white;
 }
 
 /* MAIN */
@@ -77,8 +118,8 @@ main .container {
   top: 0;
   left: 0;
   right: 0;
-  padding: 170px 0 30px;
-  max-width: 1338px;
+  padding: 170px 30px 30px;
+  max-width: 1398px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -239,6 +280,7 @@ h1 {
   right: 0;
   width: 56%;
   height: 632px;
+  object-fit: cover;
 }
 .about__figure {
   position: absolute;
@@ -274,6 +316,9 @@ h1 {
   gap: 12px;
   align-items: center;
 }
+
+/* SERVICES */
+
 .services {
   padding: 50px 0 80px;
 }
@@ -321,6 +366,15 @@ h1 {
   display: block;
   font-size: 19px;
   line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
 }
 .service-card .btn {
   padding: 8px 14px;

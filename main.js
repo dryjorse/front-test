@@ -1,3 +1,24 @@
+const burger = document.querySelector(".burger");
+const burgerBtn = document.querySelector(".burger-btn");
+const aboutMoreBtn = document.querySelector(".about__more");
+const aboutDescr = document.querySelector(".about__descr");
+
+document.addEventListener("click", (event) => {
+  console.log(event.target, burgerBtn);
+  if (event.target === burgerBtn) burger.classList.add("active");
+  else burger.classList.remove("active");
+});
+
+aboutMoreBtn.addEventListener("click", () => {
+  if (aboutDescr.classList.contains("about-descr-limit")) {
+    aboutDescr.classList.remove("about-descr-limit");
+    aboutMoreBtn.innerText = "Скрыть";
+  } else {
+    aboutDescr.classList.add("about-descr-limit");
+    aboutMoreBtn.innerText = "Подробнее";
+  }
+});
+
 let mainSwiper = new Swiper(".main-swiper", {
   effect: "fade",
   loop: true,
@@ -23,8 +44,13 @@ let productsSwiper = new Swiper(".products-swiper", {
   },
 });
 
+let parntersSwiper = new Swiper(".partners-swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+});
+
 const map = new mapgl.Map("warehousemap", {
-  key: "64f6948f-7c45-41ff-8106-021c3cfb582b",
+  key: "c474a312-46f9-411d-bebf-1a07e0e9ce5f",
   center: [74.603701, 42.875969],
   zoom: 13,
 });
